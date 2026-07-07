@@ -5,14 +5,24 @@
 function chooseTemplate(type){
 
 
-    localStorage.setItem(
-        "template",
-        type
-    );
+    if(type === "formal"){
 
 
-    window.location.href =
-    "editor.html";
+        window.location.href =
+        "editor.html";
+
+
+    }
+
+
+    else if(type === "informal"){
+
+
+        window.location.href =
+        "informal.html";
+
+
+    }
 
 
 }
