@@ -1,101 +1,192 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
+
 <head>
-    <title>Informal Letterhead</title>
-    <link rel="stylesheet" href="informal.css">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Informal Letter Editor</title>
+
+<link rel="stylesheet" href="css/informal.css">
+
 </head>
+
 
 <body>
 
-<div class="editor-container">
 
-    <!-- LEFT INPUT AREA -->
-    <div class="form-section">
-
-        <h2>Create Letter</h2>
-
-        <label>Title</label>
-        <input type="text" id="letterTitle">
-
-        <label>Content</label>
-        <textarea id="letterContent"></textarea>
-
-        <label>Prepared By</label>
-        <input type="text" id="preparedBy">
+<section class="editor">
 
 
-        <button onclick="updateLetter()">
-            Update Letter
-        </button>
+<!-- LEFT CONTROL PANEL -->
+
+<div class="input-area">
 
 
-        <button onclick="downloadPDF()">
-            Download PDF
-        </button>
+<button 
+class="back-btn"
+onclick="backHome()">
 
-    </div>
+← Back to Templates
 
-
-
-    <!-- RIGHT PREVIEW AREA -->
-    <div class="preview-section" id="letterPreview">
+</button>
 
 
-        <div class="letter-header">
+<h2>Create Informal Letter</h2>
 
-            <img src="logo.png" class="logo">
+<label>
+Prepared By
+</label>
 
-            <div>
-                <h3>NOVA WEALTH MANAGEMENT</h3>
-                <p>
-                Address Line Here<br>
-                Contact Information Here
-                </p>
-            </div>
+<input
+type="text"
+id="prepared">
 
-        </div>
+<button onclick="generateInformalLetter()">
 
+Update Preview
 
-        <hr>
-
-
-        <h2 
-        id="previewTitle" 
-        contenteditable="true">
-        Letter Title
-        </h2>
+</button>
 
 
-        <div 
-        id="previewContent" 
-        contenteditable="true">
+<button onclick="downloadPDF()">
 
-            Write your announcement / notice here...
+Download PDF
 
-        </div>
-
-
-        <br><br>
-
-
-        <p>
-        Prepared By:
-        </p>
-
-        <p 
-        id="previewPrepared" 
-        contenteditable="true">
-        Name
-        </p>
-
-
-    </div>
+</button>
 
 
 </div>
 
 
-<script src="script.js"></script>
+
+
+
+
+<!-- RIGHT PREVIEW -->
+
+<div class="preview">
+
+
+<div class="paper">
+
+
+
+<!-- COMPANY HEADER -->
+
+
+<div class="letter-header">
+
+
+<img
+src="image/logo.png"
+class="letter-logo">
+
+
+
+<div class="company">
+
+
+<h3>
+NOVA WEALTH MANAGEMENT
+</h3>
+
+
+<p>
+
+7-7, 7th Floor, The Boulevard,<br>
+
+Mid Valley City,<br>
+
+Lingkaran Syed Putra,<br>
+
+59200 Kuala Lumpur.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+<hr>
+
+
+
+
+
+
+<!-- INFORMAL CONTENT -->
+
+
+<h2 
+id="previewTitle" 
+contenteditable="true">
+
+Announcement Title
+
+</h2>
+
+
+
+<div 
+id="previewContent" 
+contenteditable="true">
+
+Write your announcement or message here...
+
+</div>
+
+
+
+
+
+
+<div class="sign">
+
+Prepared By:
+
+<br><br>
+
+
+<span 
+id="previewPrepared"
+contenteditable="true">
+
+Name
+
+</span>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+<script src="js/html2pdf.bundle.min.js"></script>
+
+<script src="js/script.js"></script>
+
 
 </body>
+
+
 </html>

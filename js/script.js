@@ -129,17 +129,9 @@ function generateLetter(){
 }
 
 function updateLetter(){
-
-    document.getElementById("previewTitle").innerHTML =
-    document.getElementById("letterTitle").value;
-
-
-    document.getElementById("previewContent").innerHTML =
-    document.getElementById("letterContent").value;
-
-
-    document.getElementById("previewPrepared").innerHTML =
-    document.getElementById("preparedBy").value;
+	
+document.getElementById("previewPrepared").innerHTML =
+document.getElementById("prepared").value;
 
 }
 
@@ -166,6 +158,15 @@ function backHome(){
 
     window.location.href =
     "index.html";
+
+
+}
+
+function generateInformalLetter(){
+
+
+document.getElementById("previewPrepared").innerHTML =
+document.getElementById("prepared").value;
 
 
 }
