@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Informal Letterhead</title>
+    <link rel="stylesheet" href="informal.css">
+</head>
+
+<body>
+
+<div class="editor-container">
+
+    <!-- LEFT INPUT AREA -->
+    <div class="form-section">
+
+        <h2>Create Letter</h2>
+
+        <label>Title</label>
+        <input type="text" id="letterTitle">
+
+        <label>Content</label>
+        <textarea id="letterContent"></textarea>
+
+        <label>Prepared By</label>
+        <input type="text" id="preparedBy">
+
+
+        <button onclick="updateLetter()">
+            Update Letter
+        </button>
+
+
+        <button onclick="downloadPDF()">
+            Download PDF
+        </button>
+
+    </div>
+
+
+
+    <!-- RIGHT PREVIEW AREA -->
+    <div class="preview-section" id="letterPreview">
+
+
+        <div class="letter-header">
+
+            <img src="logo.png" class="logo">
+
+            <div>
+                <h3>NOVA WEALTH MANAGEMENT</h3>
+                <p>
+                Address Line Here<br>
+                Contact Information Here
+                </p>
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <h2 
+        id="previewTitle" 
+        contenteditable="true">
+        Letter Title
+        </h2>
+
+
+        <div 
+        id="previewContent" 
+        contenteditable="true">
+
+            Write your announcement / notice here...
+
+        </div>
+
+
+        <br><br>
+
+
+        <p>
+        Prepared By:
+        </p>
+
+        <p 
+        id="previewPrepared" 
+        contenteditable="true">
+        Name
+        </p>
+
+
+    </div>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
